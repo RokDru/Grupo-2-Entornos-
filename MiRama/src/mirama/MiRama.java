@@ -14,6 +14,7 @@ public class MiRama {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Quiero hacerlo con Matriz [][]. Para que sea solo 1 Array
         // Listas de datos: nombre del libro, días de retraso, tipo (1: General, 2: Novedad)
         String[] n = {"Don Quijote", "Clean Code", "Java 21", "Principito"};
         int[] d = {5, 0, 2, 10};
