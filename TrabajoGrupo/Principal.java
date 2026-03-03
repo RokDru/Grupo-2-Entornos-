@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * @author WEB1-26
  */
 public class Principal {
+    //Marius ha hecho un cambio
     //DECISION GRUPAL: VAMOS A HACER UNA ARRAYLIST.
     //CADA UNO LO HACE A SU MANERA Y LUEGO DECIDIMOS CUAL ES MEJOR
 
@@ -44,3 +45,4 @@ public class Principal {
         System.out.println("RECAUDACION TOTAL: " + m + "€");
     }
 }
+
