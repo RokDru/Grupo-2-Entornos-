@@ -10,38 +10,39 @@ package Biblioteca;
 public class Marius {
 
     public static void main(String[] args) {
-        //Este es el primer cambio
-        //En mi primer cambio he hecho una Matriz. Por la diferencia de int y String he hecho castings
-        //Tambien he quitado el import de arraylist porque no lo estaba usando
+        //Cambio final. Lo meto todo en un for each. tambien uso constantes para las columnas.
+        //Cambio el nombre de las variables para que sean mas claras
         Object[][] libros = {
             {"Don Quijote", 5, 1},
             {"Clean Code", 0, 2},
             {"Java 21", 2, 2},
             {"Principito", 10, 1}
         };
-        double m = 0;
-        for (int i = 0; i < libros.length; i++) {
-            String nombre = (String) libros[i][0];
-            int dias = (int) libros[i][1];
-            int tipo = (int) libros[i][2];
-            if (dias > 0) {
-                double v = 0;
-                if (tipo == 1) {
-                    v = dias * 0.50;
+        final int pos_nombre = 0;
+        final int pos_dias = 1;
+        final int pos_tipo = 2;
+        double totalMultas = 0;
+        for (Object[] libro : libros) {
+            String tituloLibro = (String) libro[pos_nombre];
+            int diasRetraso = (int) libro[pos_dias];
+            int tipoLibro = (int) libro[pos_tipo];
+            if (diasRetraso > 0) {
+                double multa;
+                if (tipoLibro == 1) {
+                    multa = diasRetraso * 0.50;
                 } else {
-                    v = dias * 1.20;
+                    multa = diasRetraso * 1.20;
                 }
-                if (dias > 7) {
-                    v = v + 5.0;
+                if (diasRetraso > 7) {
+                    multa += 5;
                 }
-                System.out.println("Libro: " + nombre + " | Multa: " + v + " euros");
-                m += v;
-
+                System.out.println("Libro: " + tituloLibro + " | Multa: " + multa + " euros");
+                totalMultas += multa;
             } else {
-                System.out.println("Libro: " + nombre + " | Sin retraso");
+                System.out.println("Libro: " + tituloLibro + " | Sin retraso");
             }
         }
         System.out.println("---------------------------");
-        System.out.println("RECAUDACION TOTAL: " + m + "€");
+        System.out.println("RECAUDACION TOTAL: " + totalMultas + "€");
     }
 }
