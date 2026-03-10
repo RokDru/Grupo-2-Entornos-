@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Biblioteca {
     public static void main(String[] args) {
         
-        //soy ricardo
+        //soy ricardoooooooooooooooooooooooooooo
         
         // Listas de datos: nombre del libro, días de retraso, tipo (1: General, 2: Novedad)
         String[] n = {"Don Quijote", "Clean Code", "Java 21", "Principito"};
