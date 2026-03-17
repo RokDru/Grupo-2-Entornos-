@@ -18,9 +18,9 @@ public class Biblioteca {
         int[] d = {5, 0, 2, 10}; 
         int[] t = {1, 2, 2, 1};
         double m = 0; // Total multas
-        calculo(n,d,t,m);
+        System.out.println("RECAUDACION TOTAL: " + calculo(n,d,t,m) + "€");
     }
-    public static void calculo(String[] n,int[] d,int[] t, double m) {     
+    public static double calculo(String[] n,int[] d,int[] t, double m) {     
         
         for (int i = 0; i < n.length; i++) {
             // Si tiene más de 0 días de retraso
@@ -45,6 +45,7 @@ public class Biblioteca {
                 System.out.println("Libro: " + n[i] + " | Sin retraso");
             }
         }
-        System.out.println("RECAUDACION TOTAL: " + m + "€");
+        return m;
+        
     }
 }
